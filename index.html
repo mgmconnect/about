@@ -1,173 +1,225 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
     <title>ABOUT US</title>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"rel="stylesheet"/>
-  <script src="https://kit.fontawesome.com/ef91568e52.js" crossorigin="anonymous"></script>
 
-    <style media="screen">
+    <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: Exo;
-        background: linear-gradient(to left, #0a25f0, #01b2fe);
       }
-      .main {
+
+      body {
+        font-family: "Times New Roman", Times, serif;
+        /* display: flex; */
+        display: grid;
+        grid-row: auto;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(#fff 45%, #fff 100%);
+      }
+
+      .card {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        background: #fff;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+        margin-top:2em;
+        margin: auto;
+      }
+
+      .card:hover {
+        background: linear-gradient(to left, #0a25f0, #01b2fe);
+        transition: 0.6s;
+      }
+
+      .img-bx {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        transform: translateY(30px) scale(0.5);
+        transform-origin: top;
+      }
+
+      .img-bx img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .card:hover .img-bx{
+        transform: scale(1);
+        
+        transition: 0.5s;
+      }
+
+      .content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 30px;
+      }
+
+      .content .detail {
         display: flex;
         justify-content: center;
         align-items: center;
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .profile-card {
-        position: relative;
-        font-family: sans-serif;
-        width: 20em;
-        height: 20em;
-        background: #fff;
-        border-radius:50%;
-        padding: 3.5em 1em;
-        box-shadow: 0 0 22px #3336;
-        transition: 0.6s;
-        margin: 0 25px;
-        margin-top: 5em;
-      }
-      .profile-card:hover {
-        border-radius: 10px;
-        height:30vh;
-      }
-      .profile-card .img {
-        position: relative;
-        width: 10em;
-        height: 15em;
-        transition: 0.6s;
-        z-index: 99;
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: -40px;
-        background:transparent;
-      }
-      .profile-card:hover .img {
-        transform: translateY(-50px);
-      }
-      .img img {
-        width: 100%;
-        height:9em;
-        box-shadow: 0 0 22px #3336;
-        transition: 0.6s;
-        border-radius: 50%;
-        background:transparent;
-      }
-      .img p{
-        margin-top:1em;
-        padding-left:0.5em;
-        background:transparent;
-      }
-      .profile-card:hover img {
-        border-radius: 10px;
-      }
-      .caption {
+        flex-direction: column;
         text-align: center;
-        transform: translateY(-80px);
-        opacity: 0;
-        transition: 0.6s;
-        background:transparent;
       }
-      .profile-card:hover .caption{
-        opacity: 1;
-        margin-left: 1.5em;
-        transform: translateY(12px);
-        margin-top: -3em;
+
+      .content .detail h2 {
+        color: black;
+        font-size: 1.6em;
+        font-weight: bolder;
       }
-      .profile-card:hover #name{
-        transform: translateX(6.5em);
-        margin-bottom: -5em;
-        transition: 0.6s;
+
+      .content .detail h2 span {
+        font-size: 0.6em;
+        color: black;
+        font-weight: bold;
       }
-      .caption h3 {
-        margin-top: 3em;
-        font-size: 21px;
-        font-family: sans-serif;
+
+      .sci {
+        position: relative;
+        display: flex;
+        margin-top: 5px;
       }
-      .caption p {
-        font-size: 15px;
-        color: #0c52a1;
-        font-family: sans-serif;
-        background:transparent;
+
+      .sci li {
+        list-style: none;
+        margin: 4px;
       }
-      .caption {
-        color: #333;
-        margin-right: 15px;
-        font-size: 21px;
-        transition: 0.6s;
+
+      .sci li a {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: #fff;
+        font-size: 1.5em;
+        color: #444;
+        text-decoration: none;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        transition: 0.5s;
       }
-      #team{
-        background: transparent;
-      font-family: "Poppins",sans-serif;
+
+      .sci li a:hover {
+        background: #03a9f4;
+        color: #fff;
+      }
+      h1{
+        margin: auto;
+        margin-top: 2em;
       }
     </style>
+    <script
+      src="https://kit.fontawesome.com/ef91568e52.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-
   <body>
-    <div class="main">
-      <h1 id="team">OUR TEAM</h1>
-      <div class="profile-card">
-        <div class="img">
-        <img src="Varada.jpg" alt="">
-        <p id="name">VARADARAJ</p>
+    <h1>ABOUT DEVELOPERS</h1>
+    <div class="card">
+      <div class="img-bx">
+        <img src="Varada.jpg" alt="img" />
+      </div>
+      <div class="content">
+        <div class="detail">
+          <h2>Varadaraj<br />
+            <span>II BCA</span>
+          </h2>
+          <ul class="sci">
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-sharp fa-solid fa-envelope"></i></a>
+            </li>
+          </ul>
         </div>
-        <div class="caption"> 
-          <p>DEVELOPER</p>
-          <br>
-          <p>IInd BCA B</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="img-bx">
+        <img src="Mokshith.jpg" alt="img" />
+      </div>
+      <div class="content">
+        <div class="detail">
+          <h2>Mokshith<br />
+            <span>II BCA</span>
+          </h2>
+          <ul class="sci">
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-sharp fa-solid fa-envelope"></i></a>
+            </li>
+          </ul>
         </div>
-      </div>  
-      <div class="profile-card">
-        <div class="img">
-        <img src="Mokshith.jpg" alt="">
-        <p id="name">MOKSHITH</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img-bx">
+        <img src="Brijesh.jpg" alt="img" />
+      </div>
+      <div class="content">
+        <div class="detail">
+          <h2>Brijesh<br />
+            <span>III BCA</span>
+          </h2>
+          <ul class="sci">
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-sharp fa-solid fa-envelope"></i></a>
+            </li>
+          </ul>
         </div>
-        <div class="caption"> 
-          <p>DEVELOPER</p>
-          <br>
-          <p>IInd BCA A</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img-bx">
+        <img src="Goutham.jpg" alt="img" />
+      </div>
+      <div class="content">
+        <div class="detail">
+          <h2>Goutham<br />
+            <span>III BCA</span>
+          </h2>
+          <ul class="sci">
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-sharp fa-solid fa-envelope"></i></a>
+            </li>
+          </ul>
         </div>
-      </div>  
-      <div class="profile-card">
-        <div class="img">
-        <img src="Brijesh.jpg" alt="">
-        <p id="name">BRIJESH</p>
-        </div>
-        <div class="caption"> 
-          <p>DEVELOPER</p>
-          <br>
-          <p>IIIrd BCA B</p>
-        </div>
-      </div>  
-      <div class="profile-card">
-        <div class="img">
-        <img src="Goutham.jpg" alt="">
-        <p id="name">GOUTHAM</p>
-        </div>
-        <div class="caption"> 
-          <p>DEVELOPER</p>
-          <br>
-          <p>IIIrd BCA B</p>
-        </div>
-      </div>  
+      </div>
     </div>
   </body>
 </html>
