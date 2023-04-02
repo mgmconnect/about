@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>ABOUT US</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Exo;
+        background: linear-gradient(to left, #0a25f0, #01b2fe);
+      }
+      .main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .profile-card {
+        position: relative;
+        font-family: sans-serif;
+        width: 10em;
+        height: 10em;
+        background: #fff;
+        border-radius:50%;
+        padding: 3.5em 1em;
+        box-shadow: 0 0 22px #3336;
+        transition: 0.6s;
+        margin: 0 25px;
+        margin-top: 5em;
+      }
+      .profile-card:hover {
+        border-radius: 10px;
+        height: 29vh;
+      }
+      .profile-card .img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: 0.6s;
+        z-index: 99;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -40px;
+        background:transparent;
+      }
+      .profile-card:hover .img {
+        transform: translateY(-60px);
+      }
+      .img img {
+        width: 100%;
+        height:8em;
+        box-shadow: 0 0 22px #3336;
+        transition: 0.6s;
+        border-radius: 50%;
+        background:transparent;
+      }
+      .img p{
+        margin-top: 2em;
+        padding-left:0.5em;
+        margin-left: 1em;
+        background:transparent;
+      }
+      .profile-card:hover img {
+        border-radius: 10px;
+      }
+      .caption {
+        text-align: center;
+        transform: translateY(-80px);
+        opacity: 0;
+        transition: 0.6s;
+        background:transparent;
+      }
+      .profile-card:hover .caption {
+        opacity: 1;
+        margin-left: 1em;
+        transform: translateY(30px);
+      }
+      .caption h3 {
+        margin-top: 3em;
+        font-size: 21px;
+        font-family: sans-serif;
+      }
+      .caption p {
+        font-size: 15px;
+        color: #0c52a1;
+        font-family: sans-serif;
+        margin: auto;
+        background:transparent;
+        
+      }
+      .caption {
+        color: #333;
+        margin-right: 15px;
+        font-size: 21px;
+        transition: 0.6s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="profile-card">
+        <div class="img">
+        <img src="Varada.jpg" alt="">
+        <p>VARADARAJ</p>
+        </div>
+        <div class="caption"> 
+          <p>DEVELOPER</p>
+          <p>IInd BCA B</p>
+        </div>
+      </div>  
+      <div class="profile-card">
+        <div class="img">
+        <img src="Mokshith.jpg" alt="">
+        <p>MOKSHITH</p>
+        </div>
+        <div class="caption"> 
+          <p>DEVELOPER</p>
+          <p>IInd BCA A</p>
+        </div>
+      </div>  
+      <div class="profile-card">
+        <div class="img">
+        <img src="Brijesh.jpg" alt="">
+        <p>BRIJESH</p>
+        </div>
+        <div class="caption"> 
+          <p>DEVELOPER</p>
+          <p>IIIrd BCA B</p>
+        </div>
+      </div>  
+      <div class="profile-card">
+        <div class="img">
+        <img src="Goutham.jpg" alt="">
+        <p>GOUTHAM</p>
+        </div>
+        <div class="caption"> 
+          <p>DEVELOPER</p>
+          <p>IIIrd BCA B</p>
+        </div>
+      </div>  
+    </div>
+  </body>
+</html>
